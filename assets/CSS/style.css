@@ -1,0 +1,124 @@
+:root {
+    --azul-escuro: #111827;
+    --cinza-escuro: #374151;
+    --branco: #FFFFFF;
+    --fonte-principal: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background-color: var(--azul-escuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+main {
+    background-color: var(--cinza-escuro);
+    display: flex;
+    width: 46rem;
+    height: 26rem;
+    padding: 2rem;
+
+}
+
+.inserir {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    color: var(--branco);
+}
+
+
+.inserir input {
+    width: 328px;
+    height: 48px;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+
+form.inserir input:nth-last-child(3) {
+    width: 182px;
+    display: flex;
+    flex-direction: row;
+  }
+
+form.inserir input:last-child {
+    width: 130px;
+    display: inline;
+  }
+
+  .val-cvv {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cartao {
+    margin: 28px 0 0 80px;
+    border: solid grey 0.5px;
+    padding: 20px 10px;
+    background-image: url(../images/Background\ Blur.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    width: 270px;
+    height: 140px;
+    position: relative;
+  }
+
+  .dados-cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.num-cartao {
+    margin-bottom: 16px;
+    margin-top: 46px;
+}
+
+.nome-validade {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    margin: 35px auto;
+}
+
+.cartao img {
+    display: inline-block;
+}
+
+.img-pag {
+    display: inline;
+    margin: 0 230px;
+    position: relative;
+    bottom: 20px;
+}
+
+.cartao input {
+    background: transparent;
+    color: var(--branco);
+    border: none;
+    margin: 5px 0;
+  }
+
+  .cartao input:focus {
+    box-shadow:  0 0 0 0;
+    outline: 0;
+}
+
+.enviar {
+    height: 30;
+}
+
+
+  
+  
