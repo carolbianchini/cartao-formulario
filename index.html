@@ -18,7 +18,7 @@
 <main>
     <form class="inserir">
         <label for="numero">Número do cartão</label>
-        <input type="number" id="numero" placeholder="Digite o número do cartão">
+        <input type="text" id="numero" placeholder="Digite o número do cartão">
 
         <label for="nome-titular">Nome do titular</label>
         <input type="text" id="nome-titular" placeholder="Nome como está no cartão">
@@ -37,16 +37,17 @@
         <img src="../cartao-formulario/assets/images/ContactlessPayment.png" class="img-pag">
         
         <div class="dados-cartao">
-            <input type="number" class="num-cartao" placeholder="1234 8039 0258 1466" readonly="">
+            <span class="num-cartao">#### #### #### ####</span>
+            
             <div class="nome-validade">
-                <input type="text" class="nome-cartao" placeholder="Seu nome aqui" readonly="">
-                <input type="date" class="validade-cartao" readonly="">
+                <span class="nome-cartao">Seu nome</span>
+                <span class="validade-cartao">__/__/__</span>
             </div>
         </div>
     </div>
     
 </main>   
 
-
+<script src="assets/JS/script.js"></script>
 </body>
 </html>

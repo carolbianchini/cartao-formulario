@@ -11,6 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 80vh;
+    font-family: var(--fonte-principal);
 }
 
 main {
@@ -47,17 +48,17 @@ form.inserir input:nth-last-child(3) {
     width: 182px;
     display: flex;
     flex-direction: row;
-  }
+}
 
 form.inserir input:last-child {
     width: 130px;
     display: inline;
-  }
+}
 
   .val-cvv {
     display: flex;
     flex-direction: row;
-  }
+}
 
   .cartao {
     margin: 28px 0 0 80px;
@@ -70,7 +71,7 @@ form.inserir input:last-child {
     width: 270px;
     height: 140px;
     position: relative;
-  }
+}
 
   .dados-cartao {
     display: flex;
@@ -86,9 +87,9 @@ form.inserir input:last-child {
 .nome-validade {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: auto;
+    width: 270px;
     margin: 35px auto;
 }
 
@@ -103,20 +104,22 @@ form.inserir input:last-child {
     bottom: 20px;
 }
 
-.cartao input {
+.cartao span {
     background: transparent;
     color: var(--branco);
     border: none;
     margin: 5px 0;
-  }
-
-  .cartao input:focus {
-    box-shadow:  0 0 0 0;
-    outline: 0;
 }
 
-.enviar {
-    height: 30;
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 
