@@ -111,16 +111,25 @@ form.inserir input:last-child {
     margin: 5px 0;
 }
 
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+#erro-numero, #erro-nome{
+    display: none;
+    
 }
 
-input[type="number"] {
-    -moz-appearance: textfield;
+.inserir img{
+    position: relative;
+    top: 3px;
+    margin-right: 6px;
 }
+
+.inserir span{
+    font-size: 14px;
+    color: #FB7185;
+    position: relative;
+    bottom: 10px;
+}
+
+
 
 
   

@@ -18,16 +18,20 @@
 <main>
     <form class="inserir">
         <label for="numero">Número do cartão</label>
-        <input type="text" id="numero" placeholder="Digite o número do cartão" onkeypress='return filtroTeclas(event)'>
+        <input type="text" id="numero" placeholder="Digite o número do cartão" maxlength="19">
+        
+        <span id="erro-numero"><img src="assets/images/Warning.png">Insira um número de cartão válido</span>
 
         <label for="nome-titular">Nome do titular</label>
         <input type="text" id="nome-titular" placeholder="Nome como está no cartão">
 
+        <span id="erro-nome"><img src="assets/images/Warning.png">Insira um nome válido</span>
+
         <label for="validade">Validade</label>
-        <input type="date" id="validade" onkeypress='return filtroTeclas(event)'>
+        <input type="date" id="validade">
 
         <label for="cvv">CVV</label>
-        <input type="password" id="cvv" placeholder="***" onkeypress='return filtroTeclas(event)'>
+        <input type="password" id="cvv" placeholder="***" maxlength="3">
 
         <input type="submit" value="Enviar Formulário" class="enviar">
     </form>
