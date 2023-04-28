@@ -12,9 +12,8 @@
     
     <title>Formulário Cartão</title>
 </head>
+
 <body>
-
-
 <main>
     <form class="inserir">
         <label for="numero">Número do cartão</label>
@@ -23,33 +22,46 @@
         <span id="erro-numero"><img src="assets/images/Warning.png">Insira um número de cartão válido</span>
 
         <label for="nome-titular">Nome do titular</label>
-        <input type="text" id="nome-titular" placeholder="Nome como está no cartão">
+        <input type="text" id="nome-titular" placeholder="Nome como está no cartão" maxlength="28">
 
         <span id="erro-nome"><img src="assets/images/Warning.png">Insira um nome válido</span>
 
+    
         <label for="validade">Validade</label>
-        <input type="date" id="validade">
+        <input type="text" id="validade" pattern="\d{2}\/\d{4}" placeholder="MM/AAAA">
 
-        <label for="cvv">CVV</label>
+        <label for="cvv">CVV <img src="assets/images/Question.png"></label>
         <input type="password" id="cvv" placeholder="***" maxlength="3">
+        
+    <span id="erro-cvv"><img src="assets/images/Warning.png">Insira um CVV válido</span>
 
-        <input type="submit" value="Enviar Formulário" class="enviar">
+        <input type="submit" value="Adicionar cartão" id="enviar">
     </form>
 
+    
+<div class="face">
     <div class="cartao">
         <img src="../cartao-formulario/assets/images/Vector.png" class="img-visa">
         <img src="../cartao-formulario/assets/images/ContactlessPayment.png" class="img-pag">
         
         <div class="dados-cartao">
-            <span class="num-cartao">#### #### #### ####</span>
+            <span class="num-cartao">**** **** **** ****</span>
             
             <div class="nome-validade">
-                <span class="nome-cartao">Seu nome</span>
+                <span class="nome-cartao">Seu nome aqui</span>
                 <span class="validade-cartao">__/__/__</span>
             </div>
         </div>
     </div>
-    
+
+    <div class="back">
+        <div class="black-tag"></div>
+
+        <div class="cvv-back">* * *</div>
+        <p>CVV</p>
+
+    </div>
+</div>    
 </main>   
 
 <script src="assets/JS/script.js"></script>

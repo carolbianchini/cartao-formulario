@@ -1,8 +1,10 @@
 var inputNumero = document.getElementById("numero");
 var inputNome = document.getElementById('nome-titular');
 var inputCvv = document.getElementById('cvv')
+var inputValidade = document.getElementById('validade')
 var erroNumero = document.getElementById("erro-numero");
 var erroNome = document.getElementById("erro-nome");
+var erroCvv = document.getElementById("erro-cvv");
 var valorAnteriorNome = inputNome.value;
 var valorAnteriorNumero = inputNumero.value;
 var valorAnteriorCvv = inputCvv.value;
@@ -11,12 +13,20 @@ var valorAnteriorCvv = inputCvv.value;
 
 //Adicionando o texto ao cartão
 
-inputNumero.onkeydown = () =>{
-    document.querySelector('.num-cartao').innerText = inputNumero.value;
+inputNumero.oninput = () =>{
+    document.querySelector('.num-cartao').innerHTML = inputNumero.value;
 }
 
-document.getElementById('nome-titular').onkeydown = () =>{
-    document.querySelector('.nome-cartao').innerText = document.getElementById('nome-titular').value;
+inputNome.oninput = () =>{
+    document.querySelector('.nome-cartao').innerHTML = inputNome.value;
+}
+
+inputCvv.oninput = () =>{
+  document.querySelector('.cvv-back').innerHTML = inputCvv.value;
+}
+
+inputValidade.oninput = () =>{
+  document.querySelector('.validade-cartao').innerHTML = inputValidade.value;
 }
 
 
@@ -72,11 +82,11 @@ function checkCharNumber(evento) {
 inputCvv.addEventListener("keypress", function(evt) {
   var valor = this.value;
     if(!checkCharCvv(evt)) {
-      erroNumero.style.display = "block";
+      erroCvv.style.display = "block";
       evt.preventDefault();
       
   }else {
-    erroNumero.style.display = "none";
+    erroCvv.style.display = "none";
     valorAnteriorCvv = valor;
   }
 });
@@ -88,7 +98,6 @@ function checkCharCvv(evt) {
       return true;
   }
 }
-
 
 
 //Máscara Cartão 
@@ -103,6 +112,17 @@ inputNumero.addEventListener('keypress', () => {
   })
 
 
+  document.querySelector('#cvv').onmouseenter = () =>{
+    document.querySelector('.cartao').style.transform = 'perspective(1000px) rotateY(-180deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+    document.querySelector('.back').style.zIndex = '1';
+}
 
+document.querySelector('#cvv').onmouseleave = () =>{
+    document.querySelector('.cartao').style.transform = 'perspective(1000px) rotateY(0deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+    document.querySelector('.back').style.zIndex = '0';
+    
+}
 
 
