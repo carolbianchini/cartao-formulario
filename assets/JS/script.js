@@ -5,9 +5,11 @@ var inputValidade = document.getElementById('validade')
 var erroNumero = document.getElementById("erro-numero");
 var erroNome = document.getElementById("erro-nome");
 var erroCvv = document.getElementById("erro-cvv");
+var erroValidade = document.getElementById("erro-validade");
 var valorAnteriorNome = inputNome.value;
 var valorAnteriorNumero = inputNumero.value;
 var valorAnteriorCvv = inputCvv.value;
+var valorAnteriorVal = inputValidade.value;
 
 
 
@@ -99,8 +101,31 @@ function checkCharCvv(evt) {
   }
 }
 
+//Validade
 
-//Máscara Cartão 
+inputValidade.addEventListener("keypress", function(event) {
+  var valor = this.value;
+    if(!checkCharVal(event)) {
+      erroValidade.style.display = "block";
+      event.preventDefault();
+      
+  }else {
+    erroValidade.style.display = "none";
+    valorAnteriorVal = valor;
+  }
+});
+
+function checkCharVal(event) {
+    var char = String.fromCharCode(event.keyCode);
+    var patterCvv = '[0-9]';
+    if (char.match(patterCvv)) {
+      return true;
+  }
+}
+
+
+
+//Máscara Num. Cartão 
 
 inputNumero.addEventListener('keypress', () => {
     let inputLength = inputNumero.value.length
@@ -109,6 +134,16 @@ inputNumero.addEventListener('keypress', () => {
         inputNumero.value += ' '
     }
 
+  })
+
+  //Máscara Validade
+
+  inputValidade.addEventListener('keypress', () => {
+    let inputLength = inputValidade.value.length
+
+    if (inputLength == 2) {
+      inputValidade.value += '/'
+    }
   })
 
 

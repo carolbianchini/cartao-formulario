@@ -238,4 +238,8 @@ input::placeholder {
     margin: 0 15px;
 }
 
+#erro-validade {
+    display: none;
+}
+
   

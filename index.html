@@ -28,7 +28,9 @@
 
     
         <label for="validade">Validade</label>
-        <input type="text" id="validade" pattern="\d{2}\/\d{4}" placeholder="MM/AAAA">
+        <input type="text" id="validade" placeholder="MM/AAAA" maxlength="7">
+
+        <span id="erro-validade"><img src="assets/images/Warning.png">Insira uma data válida</span>
 
         <label for="cvv">CVV <img src="assets/images/Question.png"></label>
         <input type="password" id="cvv" placeholder="***" maxlength="3">
