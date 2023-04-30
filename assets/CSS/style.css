@@ -1,11 +1,12 @@
+@import url("cartao.css");
+
 :root {
     --azul-escuro: #111827;
     --cinza-escuro: #374151;
     --branco: #FFFFFF;
     --cinza-claro: #D1D5DB;
     --fonte-principal: 'Source Sans Pro', sans-serif;
-    --roxo: #9333EA;
-    
+    --roxo: #9333EA; 
 }
 
 
@@ -14,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
     font-family: var(--fonte-principal);
     overflow: hidden;
 }
@@ -23,12 +24,10 @@ main {
     background-color: var(--cinza-escuro);
     display: flex;
     width: 47rem;
-    height: 26rem;
+    height: 28rem;
     padding: 2rem;
 
 }
-
-
 
 .inserir {
     display: flex;
@@ -45,7 +44,7 @@ main {
     background-color: var(--azul-escuro);
     color: var(--branco);
     font-weight: 400;
-    margin: 10px 0;
+    margin: 5px 0 30px;
 }
 
 
@@ -60,15 +59,10 @@ main {
     display: flex;
 }
 
-.val-cvv {
-    display: flex;
-    flex-direction: row;
-}
-
 #enviar {
     width: 755px;
     position: absolute;
-    top: 380px;
+    top: 420px;
     background-color: var(--roxo);
     color: var(--branco);
     font-size: 20px;
@@ -76,38 +70,6 @@ main {
     text-transform: none;
 }
 
-
-
-
-.dados-cartao {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-span.num-cartao {
-    align-items: center;
-    font-size: 20px;
-    position: relative;
-    top: 15px;
-    width: 300px;
-}
-
-.nome-validade {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    top: 50px;
-    position: relative;
-    font-size: 16px;
-}
-
-.nome-cartao {
-    flex-wrap: wrap;
-    text-transform: uppercase;
-}
 
 input {
     text-transform: uppercase;
@@ -121,30 +83,8 @@ input::placeholder {
     color: #9CA3AF;
 }
 
-.validade-cartao {
-    display: inline;
 
-}
-
-.cartao img {
-    display: inline-block;
-}
-
-.img-pag {
-    display: inline;
-    margin: 0 280px;
-    position: relative;
-    bottom: 20px;
-}
-
-.cartao span {
-    background: transparent;
-    color: var(--branco);
-    border: none;
-    margin: 5px 0;
-}
-
-#erro-numero, #erro-nome, #erro-cvv{
+#erro-numero, #erro-nome, #erro-cvv, #erro-validade{
     display: none;
     
 }
@@ -159,87 +99,18 @@ input::placeholder {
     font-size: 14px;
     color: #FB7185;
     position: relative;
-    bottom: 10px;
+    bottom: 30px;
+    margin: 0;
 }
 
-.cartao{
-    margin: 28px 0 0 80px;
-    border: solid grey 0.5px;
-    padding: 20px 15px;
-    background-image: url(../images/Background\ Blur.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0.9rem;
-    width: 19rem;
-    height: 10rem;
-    z-index: 1;
+@media screen and (max-width: 600px){
+    body, main, .inserir, #enviar, .inserir {
+        width: auto;
+        margin: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
 }
 
-.back {
-    position: absolute;
-    top: 0;
-    margin: 28px 0 0 80px;
-    border: solid grey 0.5px;
-    padding: 20px 15px;
-    background-image: url(../images/Background\ Blur.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0.9rem;
-    width: 19rem;
-    height: 10rem;
-    transform: rotateY(-180deg);
-    backface-visibility: hidden;
-}
-
-.face {
-    width: 19rem;
-    height: 10rem;
-    perspective: 700px;
-    padding: 0 0;
-}
-  
-.cartao, .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: 700ms;
-}
-
-.black-tag {
-    background-color: black;
-    position: absolute;
-    right:0px;
-    width: 20.9rem;
-    height: 2.2rem;
-    padding: 0 0 0 0;
-}
-
-.cvv-back {
-    width: 200px;
-    height: 15px;
-    background-color: var(--cinza-claro);
-    font-size: 16px;
-    color: var(--cinza-escuro);
-    position: relative;
-    right: 30px;
-    margin: 80px auto;
-    text-align: end;
-    align-items: start;
-    padding: 10px 15px;
-}
-
-.back p {
-    color: var(--cinza-claro);
-    font-size: 16px;
-    font-weight: 600;
-    position: relative;
-    bottom:108px;
-    text-align: end;
-    margin: 0 15px;
-}
-
-#erro-validade {
-    display: none;
-}
-
-  

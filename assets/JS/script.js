@@ -32,7 +32,7 @@ inputValidade.oninput = () =>{
 }
 
 
-//Tirar letras e caracteres especiais
+//Tirar Números e caracteres especiais
 
 //Nome
 
@@ -56,6 +56,7 @@ function checkChar(e) {
   }
 }
 
+//Tirar Letras e caracteres especiais
 
 //numero
 
@@ -107,6 +108,7 @@ inputValidade.addEventListener("keypress", function(event) {
   var valor = this.value;
     if(!checkCharVal(event)) {
       erroValidade.style.display = "block";
+      inputValidade.style.border = "red"
       event.preventDefault();
       
   }else {
@@ -146,6 +148,8 @@ inputNumero.addEventListener('keypress', () => {
     }
   })
 
+
+//Animação Cartão
 
   document.querySelector('#cvv').onmouseenter = () =>{
     document.querySelector('.cartao').style.transform = 'perspective(1000px) rotateY(-180deg)';
