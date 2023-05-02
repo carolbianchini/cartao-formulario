@@ -108,7 +108,6 @@ inputValidade.addEventListener("keypress", function(event) {
   var valor = this.value;
     if(!checkCharVal(event)) {
       erroValidade.style.display = "block";
-      inputValidade.style.border = "red"
       event.preventDefault();
       
   }else {
@@ -124,8 +123,6 @@ function checkCharVal(event) {
       return true;
   }
 }
-
-
 
 //Máscara Num. Cartão 
 
