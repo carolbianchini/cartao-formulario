@@ -11,7 +11,7 @@
 
 ## Descrição do Projeto 
 
-Formulário de cartão de crédito co validação de dados. 
+Formulário de cartão de crédito com validação de dados. 
 
 URL: https://cartao-formulario.vercel.app/
 
